@@ -1,0 +1,42 @@
+### CREAR DOCTOR
+POST http://localhost:9000/api/v1/doctores HTTP/1.1
+Content-Type: application/json
+
+{
+  "nombres": "Nicole",
+  "apellidos": "Hernandez",
+  "tipoDocumento": "CC",
+  "numeroDocumento": "1234567872",
+  "fechaNacimiento": "1980-01-01",
+  "sexo": "M",
+  "telefono": "3001234567",
+  "direccion": "Bogotá, Colombia",
+  "correo": "nicole@gmail.com",
+  "especialidad": "Cardiología",
+  "usuario": "Nicole",
+  "clave": "password123"
+}
+
+###
+
+### OBTENER TODOS LOS DOCTORES
+GET http://localhost:9000/api/v1/doctores HTTP/1.1
+
+###
+
+### OBTENER UN DOCTOR POR ID
+GET http://localhost:9000/api/v1/doctores/691b98556436a1c876bb316b HTTP/1.1
+
+### ACTUALIZAR DOCTOR
+PUT http://localhost:9000/api/v1/doctores/691b98556436a1c876bb316b HTTP/1.1
+Content-Type: application/json
+
+{
+  "telefono": "3105550000",
+  "especialidad": "Neurología"
+}
+
+###
+
+### ELIMINAR DOCTOR POR ID
+DELETE http://localhost:9000/api/v1/doctores/691f2bf5ab3bfcd2b0b82971 HTTP/1.1

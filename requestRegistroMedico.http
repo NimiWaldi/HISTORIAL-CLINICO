@@ -1,0 +1,56 @@
+### CREAR REGISTRO MÉDICO
+POST http://localhost:9000/api/v1/registros HTTP/1.1
+Content-Type: application/json
+
+{
+  "pacienteId": "68f97388a364ecd31278299b",
+  "motivoConsulta": "Dolor abdominal persistente",
+  "diagnostico": "Gastritis crónica",
+  "tratamiento": "Omeprazol 20mg durante 14 días",
+  "medicoEncargado": "Dr. Juan Pérez",
+  "notasAdicionales": "El paciente refiere dolor después de las comidas."
+}
+
+###
+
+### CREAR OTRO REGISTRO MÉDICO
+POST http://localhost:9000/api/v1/registros HTTP/1.1
+Content-Type: application/json
+
+{
+  "pacienteId": "68fa4457cf542460447ffaa8",
+  "motivoConsulta": "Dolor de cabeza intenso",
+  "diagnostico": "Migraña",
+  "tratamiento": "Acetaminofén 500mg cada 8 horas",
+  "medicoEncargado": "Dra. Ana Gómez",
+  "notasAdicionales": "Se recomienda evitar pantallas y tomar reposo."
+}
+
+###
+
+### OBTENER TODOS LOS REGISTROS MÉDICOS
+GET http://localhost:9000/api/v1/registros HTTP/1.1
+
+###
+
+### OBTENER UN REGISTRO POR ID
+GET http://localhost:9000/api/v1/registros/691b98dc6436a1c876bb317b HTTP/1.1
+
+###
+
+### ELIMINAR REGISTRO MÉDICO
+DELETE http://localhost:9000/api/v1/registros/691b98dc6436a1c876bb317b HTTP/1.1
+
+###
+
+### ACTUALIZAR REGISTRO MÉDICO
+PUT http://localhost:9000/api/v1/registros/691b98dc6436a1c876bb317b HTTP/1.1
+Content-Type: application/json
+
+{
+  "motivoConsulta": "Dolor abdominal leve",
+  "diagnostico": "Revisión de gastritis",
+  "tratamiento": "Continuar medicación por 7 días más",
+  "medicoEncargado": "Dr. Juan Pérez"
+}
+
